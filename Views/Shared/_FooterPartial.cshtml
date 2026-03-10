@@ -1,0 +1,14 @@
+﻿@inject IConfiguration config
+@{
+    AppConfig? appConfig = config.GetSection("Project").Get<AppConfig>();
+}
+
+<footer class="footer-dark">
+    <div class="container">
+        <p>Sample text. Click to select the Text Element.</p>
+        <p class="small">
+            <a href="#">Website Templates</a> создано с помощью
+            <a href="#">Website Builder Software</a>.
+        </p>
+    </div>
+</footer>

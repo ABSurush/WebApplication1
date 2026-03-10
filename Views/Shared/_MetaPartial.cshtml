@@ -1,0 +1,8 @@
+﻿@inject IConfiguration config
+@{
+    AppConfig? appConfig = config.GetSection("Project").Get<AppConfig>();
+}
+
+<link href="#" rel="shortcut icon" />
+<meta charset="utf-8" />
+<title>@(ViewBag.Title ?? appConfig?.Web.WebName)</title>

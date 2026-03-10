@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @await Html.PartialAsync("_MetaPartial")
+
+    @await Html.PartialAsync("_CssPartial")
+</head>
+<body>
+    <header>
+        @await Html.PartialAsync("_HeaderPartial")
+    </header>
+    <div>
+        <!-- Main -->
+        <section class="main">
+            <div class="container-fluid p-0">
+                <div class="row g-0 align-items-center">
+                    <img src="~/img/1.jpg" alt="Бариста" class="main-img">
+
+                    <!-- Левая колонка с текстом -->
+                    <div class="col-lg-6 d-flex justify-content-center position-absolute">
+                        <div class="main-card">
+                            <h1 class="mb-4">
+                                Уникальное ремесленное кафе в Нью-Йорке
+                            </h1>
+                            <p class="mb-4">
+                                Amet luctus venenatis lectus magna fringilla urna porttitor
+                                rhoncus dolor. A lacus vestibulum sed arcu non. Dolor magna
+                                eget est lorem ipsum dolor sit amet consectetur.
+                            </p>
+                            <small class="d-block mb-4 opacity-75">
+                                Изображение из Freepik
+                            </small>
+                            <a href="#" class="btn btn-outline-light">
+                                МЕНЮ ПРОСМОТРА
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        @RenderBody()
+        @await Html.PartialAsync("_FooterPartial")
+    </div>
+    @await Html.PartialAsync("_ScriptsPartial")
+</body>
+</html>
